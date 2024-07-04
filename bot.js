@@ -1,5 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const quote_apiurl = "https://zenquotes.io/api/random"
+const keep_alive = require('./keep_alive.js")
 const fact_apiurl = "https://uselessfacts.jsph.pl/api/v2/facts/random"
 const meme_url = "https://meme-api.com/gimme"
 require('dotenv').config()
