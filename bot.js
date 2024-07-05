@@ -50,17 +50,17 @@ async function memeImg() {
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
 
-    if (msg.text.toLocaleLowerCase() === "$quote") {
+    if (msg.text.toLowerCase() === "$quote") {
         const quote = await getQuote();
         bot.sendMessage(chatId, quote);
     }
 
-    if (msg.text.toLocaleLowerCase() === "$fact") {
+    if (msg.text.toLowerCase() === "$fact") {
         const fact = await getFact();
         bot.sendMessage(chatId, fact);
     }
 
-    if (msg.text.toLocaleLowerCase() === "$meme") {
+    if (msg.text.toLowerCase() === "$meme") {
         const meme = await memeImg();
         const memetitle = await memeTitle();
         bot.sendMessage(chatId, memetitle);
